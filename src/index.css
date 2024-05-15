@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slide-enter-active {
+    transition: all 0.3s ease-out;
+}
+
+.slide-leave-active {
+    transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-enter-from,
+.slide-leave-to {
+    transform: translateX(20px);
+    opacity: 0;
+}
+
+.container {
+    @apply mx-auto relative;
+}
+
+@layer base {
+
+    input[type='number']::-webkit-outer-spin-button,
+    input[type='number']::-webkit-inner-spin-button,
+    input[type='number'] {
+        -webkit-appearance: none;
+        margin: 0;
+        -moz-appearance: textfield !important;
+    }
+}
+
+.ltr {
+    direction: ltr;
+}
+
+body {
+    direction: rtl;
+    @apply font-regular text-md text-right;
+}
